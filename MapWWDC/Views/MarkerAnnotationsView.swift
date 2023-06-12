@@ -9,6 +9,12 @@ import SwiftUI
 import MapKit
 import ContactsUI
 
+// MARK: Description
+
+/// We can annotate in map in tow ways:
+/// 1. Marker - with a default balloon shape with custom icons in it,
+/// 2. AnnotationView - witch will allow us to define our own SwiftUI View as an annotation view
+
 struct MarkerAnnotationsView: View {
     @State private var cameraPosition: MapCameraPosition = .region(.myRegion)
     
@@ -67,8 +73,6 @@ struct MarkerAnnotationsView: View {
             // MARK: Map annotations - User
             UserAnnotation()
             
-        
-            
         }
     }
     
@@ -92,11 +96,7 @@ struct MarkerAnnotationsView: View {
     MarkerAnnotationsView()
 }
 
-// MARK: Description
 
-/// We can annotate in map in tow ways:
-/// 1. Marker - with a default balloon shape with custom icons in it,
-/// 2. AnnotationView - witch will allow us to define our own SwiftUI View as an annotation view
 
 
 

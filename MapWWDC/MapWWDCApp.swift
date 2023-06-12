@@ -11,9 +11,7 @@ import SwiftUI
 struct MapWWDCApp: App {
     var body: some Scene {
         WindowGroup {
-//            MarkerAnnotationsView()
-            
-            MapControlsView()
+            MapSearchView()
         }
     }
 }
