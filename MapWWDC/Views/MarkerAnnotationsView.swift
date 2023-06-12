@@ -14,6 +14,7 @@ import ContactsUI
 /// We can annotate in map in tow ways:
 /// 1. Marker - with a default balloon shape with custom icons in it,
 /// 2. AnnotationView - witch will allow us to define our own SwiftUI View as an annotation view
+/// 3. UserAnnotation - show user current location
 
 struct MarkerAnnotationsView: View {
     @State private var cameraPosition: MapCameraPosition = .region(.myRegion)

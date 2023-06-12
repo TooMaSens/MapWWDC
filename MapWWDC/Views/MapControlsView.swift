@@ -17,22 +17,22 @@ struct MapControlsView: View {
             UserAnnotation()
         }
         .mapControls {
-            // To show map compass
-            // Rotate the map to see
+            /// To show map compass
+            /// Rotate the map to see
             MapCompass()
             
-            // To show user location button
-            // which allows you to show the user's current location
+            /// To show user location button
+            /// which allows you to show the user's current location
             MapUserLocationButton()
             
             
-            // Access to the 3D effect
-            // Zoom in on the map
+            /// Access to the 3D effect
+            /// Zoom in on the map
             MapPitchButton()
             
             
-            // To show scale
-            // Zoom in/out on the map
+            /// To show scale
+            /// Zoom in/out on the map
             MapScaleView()
              
         }

@@ -22,7 +22,6 @@ struct MapSearchView: View {
                 ForEach(searchResults, id: \.self) { mapItem in
                     let placemark = mapItem.placemark
                     
-                    
                     Marker(placemark.title ?? "Place", coordinate: placemark.coordinate)
                 }
             }
