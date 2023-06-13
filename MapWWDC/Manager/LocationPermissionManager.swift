@@ -10,13 +10,13 @@ import CoreLocation
 
 class LocationPermissionManager: NSObject {
 
-    static let shared = LocationPermissionManager()
     var userCoordinate: ((CLLocationCoordinate2D) -> Void)?
     
     lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.distanceFilter = 10
         manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        manager.requestWhenInUseAuthorization()
         manager.delegate = self
         
         
@@ -64,12 +64,5 @@ extension LocationPermissionManager: CLLocationManagerDelegate {
             break
         }
     }
-    
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        userCoordinate?(location.coordinate)
-    }
-    
     
 }

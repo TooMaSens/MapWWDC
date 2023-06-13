@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct MapWWDCApp: App {
+    init() { _ = LocationPermissionManager() }
     var body: some Scene {
         WindowGroup {
-//            MapSearchView()
-            MapSelection()
+            UserLocationView()
         }
     }
 }
