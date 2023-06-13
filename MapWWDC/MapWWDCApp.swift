@@ -12,7 +12,7 @@ struct MapWWDCApp: App {
     init() { _ = LocationPermissionManager() }
     var body: some Scene {
         WindowGroup {
-            UserLocationView()
+            UserView()
         }
     }
 }

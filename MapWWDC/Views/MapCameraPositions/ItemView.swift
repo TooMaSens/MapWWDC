@@ -29,7 +29,7 @@ extension MKMapItem {
         /// import ContactsUI
         /// Allows us to create an adress
         let address = [
-            CNPostalAddressStreetKey: "24 Happy Street, Warsaw",
+            CNPostalAddressStreetKey: "24 Happy Street",
             CNPostalAddressCityKey: "Warsaw",
             CNPostalAddressPostalCodeKey: "01-393",
             CNPostalAddressISOCountryCodeKey: "PL"
