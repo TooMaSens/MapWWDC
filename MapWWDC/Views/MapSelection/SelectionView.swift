@@ -34,6 +34,20 @@ struct SelectionView: View {
                 let coordinate = option.placemark.coordinate
                 
                 Marker(title, coordinate: coordinate)
+                
+                // MARK: in this case 'option'
+                // let placemark = option.placemark and so on ...
+                
+                /// - Parameters:
+                ///   - placemark: The placemark object containing the location information.
+                ///   - pointOfInterestCategory: The point-of-interest category for the map item.
+                    ///   let category = option.pointOfInterestCategory = .airport
+                ///   - isCurrentLocation: A Boolean value that indicates whether the map item represents the user’s location.
+                ///   - name: The descriptive name associated with the map item.
+                ///   - phoneNumber: The phone number associated with a business at the specified location.
+                ///   - url: The URL associated with the specified location
+                
+                
             }
         }
     }
