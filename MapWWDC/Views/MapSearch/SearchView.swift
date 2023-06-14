@@ -15,7 +15,6 @@ struct SearchView: View {
     // Look in func searchPlaces() at the bottom of the page
     @State private var viewingRegion: MKCoordinateRegion?
     
-    // MARK: Search Components
     @State private var searchText: String = ""
     @State private var searchResults: [MKMapItem] = []
     
@@ -30,7 +29,8 @@ struct SearchView: View {
                 }
             }
             
-            searchBar()
+            SearchBar(searchText: $searchText, searchResults: $searchResults, viewingRegion: $viewingRegion)
+            
         }
         .onMapCameraChange {
             viewingRegion = $0.region
@@ -44,42 +44,44 @@ struct SearchView: View {
 }
 
 
-// MARK: View Components
-extension SearchView {
+struct SearchBar: View {
+    @Binding var searchText: String
+    @Binding var searchResults: [MKMapItem]
+    @Binding var viewingRegion: MKCoordinateRegion?
     
-    private func searchBar() -> some View {
-        TextField("Search place", text: $searchText)
-            .padding()
-            .background(.ultraThinMaterial)
-            .clipShape(.rect(cornerRadius: 10, style: .continuous))
-            .overlay(alignment: .trailing) { xmarkButton() }
-            .padding()
-            .onSubmit {
-                Task {
-                    do {
-                        try await searchPlaces()
-                    } catch {
-                        print(error.localizedDescription)
-                    }
+    var body: some View {
+        HStack {
+            TextField("Search place", text: $searchText)
+            
+            Button {
+                searchText = ""
+                searchResults.removeAll()
+            } label: {
+                Image(systemName: "xmark")
+                    .padding(.trailing)
+                    .opacity(searchText.isEmpty ? 0 : 1)
+            }
+            
+        }
+        .padding()
+        .background(.ultraThinMaterial)
+        .clipShape(.rect(cornerRadius: 10, style: .continuous))
+        .padding()
+        .onSubmit {
+            Task {
+                do {
+                    try await searchPlaces()
+                } catch {
+                    print(error.localizedDescription)
                 }
             }
-           
-    }
-    
-    private func xmarkButton() -> some View {
-        Button {
-            searchText = ""
-            searchResults.removeAll()
-        } label: {
-            Image(systemName: "xmark")
-                .padding(.trailing)
-                .opacity(searchText.isEmpty ? 0 : 1)
         }
     }
 }
 
+
 // MARK: Funcion
-extension SearchView {
+extension SearchBar {
     
     /// - Parameters:
     ///   - naturalLanguageQuery: A string containing the desired search item.

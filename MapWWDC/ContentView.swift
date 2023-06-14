@@ -9,7 +9,6 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
-    @State private var position: MapCameraPosition = .automatic
     var body: some View {
         VStack {
             Image(systemName: "globe")

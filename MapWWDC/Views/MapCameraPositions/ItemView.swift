@@ -11,9 +11,9 @@ import ContactsUI
 
 struct ItemView: View {
     @State private var position: MapCameraPosition = .item(.warsaw)
+    
     var body: some View {
         Map(position: $position)
-        
     }
 }
 

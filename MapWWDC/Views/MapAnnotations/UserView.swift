@@ -15,8 +15,18 @@ import MapKit
 /// Latitude:        52,237
 /// Longitude:     21,017
 
+
+/// Creates a position that frames the user's location.
+///
+/// - Parameters:
+///   - followsHeading: If the camera should rotate to match the heading.
+///     of the user.
+///   - fallback: The position to use if the user's location hasn't yet been
+///     resolved.
+
 struct UserView: View {
     @State private var position: MapCameraPosition = .userLocation(
+        followsHeading: false,
         fallback: .camera(
             MapCamera(centerCoordinate: .parking,
                       distance: 1980,

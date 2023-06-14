@@ -10,6 +10,7 @@ import MapKit
 
 extension CLLocationCoordinate2D {
     static var myLocation: CLLocationCoordinate2D = .init(latitude: 52.237, longitude: 21.017)
+    static let parking = CLLocationCoordinate2D(latitude: 42.354528, longitude: -71.068369)
 }
 
 extension MKCoordinateRegion {
@@ -18,5 +19,6 @@ extension MKCoordinateRegion {
 
 extension MKCoordinateSpan {
     static var mySpan: MKCoordinateSpan = .init(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    static let span = MKCoordinateSpan(latitudeDelta: 0.0125, longitudeDelta: 0.0125)
 }
 
