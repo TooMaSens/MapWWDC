@@ -39,9 +39,10 @@ struct UserLocationView: View {
             UserAnnotation()
         }
         .mapControls {
+            
+            // MARK: WORK ONLY IF WE HAVE ACCESS TO THE USER'S LOCATION
             MapUserLocationButton()
             /// Changes the position of the camera to the user's location
-            // MARK: WORK ONLY IF WE HAVE ACCESS TO THE USER'S LOCATION
         }
     }
 }
