@@ -12,8 +12,8 @@ import MapKit
 /// UserAnnotation - show user current location
 
 /// Run simulator ->  Allow location access ->  In menu bar: 'Features' -> Location -> Custom Location:
-///  Latitude:        52,237
-///  Longitude:     21,017
+/// Latitude:        52,237
+/// Longitude:     21,017
 
 struct UserView: View {
     @State private var position: MapCameraPosition = .userLocation(

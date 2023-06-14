@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E8163FA82A385681009F8EF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8163FA72A385681009F8EF1 /* HomeView.swift */; };
 		E8163FAD2A387231009F8EF1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8163FAC2A387231009F8EF1 /* MapView.swift */; };
+		E8507A382A39B549001018A2 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8507A372A39B549001018A2 /* SelectionView.swift */; };
 		E88E9CE62A34DA9F005FD3B0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88E9CE52A34DA9F005FD3B0 /* Location.swift */; };
 		E88E9CED2A34EEAE005FD3B0 /* LocationPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88E9CEC2A34EEAE005FD3B0 /* LocationPermissionManager.swift */; };
 		E8A9BF502A34CD9900B47CEC /* MapWWDCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A9BF4F2A34CD9900B47CEC /* MapWWDCApp.swift */; };
@@ -35,6 +36,7 @@
 		E8163FA72A385681009F8EF1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E8163FA92A3856B9009F8EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E8163FAC2A387231009F8EF1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E8507A372A39B549001018A2 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		E88E9CE52A34DA9F005FD3B0 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E88E9CEC2A34EEAE005FD3B0 /* LocationPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionManager.swift; sourceTree = "<group>"; };
 		E8A9BF4C2A34CD9900B47CEC /* MapWWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapWWDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,11 +92,20 @@
 			path = MapCameraPositions;
 			sourceTree = "<group>";
 		};
+		E8507A362A39B3AA001018A2 /* MapSelection */ = {
+			isa = PBXGroup;
+			children = (
+				E8507A372A39B549001018A2 /* SelectionView.swift */,
+			);
+			path = MapSelection;
+			sourceTree = "<group>";
+		};
 		E88E9CDF2A34D98C005FD3B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E8163FB22A387EA2009F8EF1 /* MapCameraPositions */,
 				E8BB7EAA2A38DBA6005D6501 /* MapAnnotations */,
+				E8507A362A39B3AA001018A2 /* MapSelection */,
 				E8BB7EA72A38D69A005D6501 /* Other */,
 				E8E63A052A37913D00C2E8CF /* LookAround */,
 			);
@@ -278,6 +289,7 @@
 				E8E63A002A37858F00C2E8CF /* MapSelection.swift in Sources */,
 				E8BB7EA62A38D2F7005D6501 /* RegionView.swift in Sources */,
 				E8EB79612A387F2700F2A840 /* CameraView.swift in Sources */,
+				E8507A382A39B549001018A2 /* SelectionView.swift in Sources */,
 				E8BB7EAC2A38DBCA005D6501 /* MarkerView.swift in Sources */,
 				E8EB79652A38820900F2A840 /* UserLocationView.swift in Sources */,
 				E8E63A042A37911B00C2E8CF /* LookAroundView.swift in Sources */,

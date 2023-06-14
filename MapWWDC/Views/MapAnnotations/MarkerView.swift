@@ -31,7 +31,7 @@ struct MarkerView: View {
             
             Marker("Marker with systemImage", systemImage: "house", coordinate: coordinate2)
                 .tint(.cyan)
-                .annotationSubtitles(.automatic)
+                .annotationSubtitles(.automatic) /// Change the visibility of the subtitle
 
             
             Marker("Marker with Image", image: "carImage", coordinate: coordinate3)

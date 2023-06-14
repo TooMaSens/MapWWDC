@@ -9,8 +9,6 @@ import Foundation
 import CoreLocation
 
 class LocationPermissionManager: NSObject {
-
-    var userCoordinate: ((CLLocationCoordinate2D) -> Void)?
     
     lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
